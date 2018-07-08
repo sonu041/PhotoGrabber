@@ -11,7 +11,7 @@ if [ -f "$img_file" ]
 then
 	echo "File already exists"
 else
-	img="$(curl https://www.nationalgeographic.com/photography/photo-of-the-day/ -s | grep -o "aemLeadImage':[^\]*" | grep -o "https://[a-zA-Z0-9./?=_-]*")"
+	img="$(curl https://www.nationalgeographic.com/photography/photo-of-the-day/ -s | grep -o "og:image[^\]*" | grep -o "https://[a-zA-Z0-9./?=_-]*")"
 	if [ -n "$img" ]
 	then
 		echo "Downloading $img"
