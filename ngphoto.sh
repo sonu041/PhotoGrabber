@@ -4,7 +4,7 @@
 # Date: 25 July 2017
 
 currdate=$(date +"%Y%m%d")
-img_file="/Users/shuvankar/Desktop/Shuvankar/PhotoGrabber/$currdate.jpg"
+img_file="./$currdate.jpg"
 #echo $img_file
 #echo $currdate
 if [ -f "$img_file" ]
